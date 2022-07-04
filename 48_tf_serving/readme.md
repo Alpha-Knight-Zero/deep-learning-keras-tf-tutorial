@@ -2,6 +2,8 @@ To start docker container
 ==========================
 ```
 docker run -it -v C:\Code\deep-learning-keras-tf-tutorial\48_tf_serving:/48_tf_serving -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
+
+my - docker run -it -v C:\Users\prpus\Desktop\Project:/car -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
 ```
 
 To serve only latest model
