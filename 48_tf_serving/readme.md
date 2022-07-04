@@ -3,13 +3,17 @@ To start docker container
 ```
 docker run -it -v C:\Code\deep-learning-keras-tf-tutorial\48_tf_serving:/48_tf_serving -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
 
-my - docker run -it -v C:\Users\prpus\Desktop\Project:/car -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
+my - 
+docker run -it -v C:\Users\prpus\Desktop\Project:/car -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
 ```
 
 To serve only latest model
 ===========================
 ```
 tensorflow_model_server --rest_api_port=8601 --model_name=email_model --model_base_path=/48_tf_serving/saved_models/
+
+my - 
+tensorflow_model_server --rest_api_port=8601 --model_name=car_model --model_base_path=/car/saved_models/
 ```
 
 To serve models using model config file
